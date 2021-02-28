@@ -1,0 +1,27 @@
+<html>
+<body onload="getFeed()">
+    <p id="podcasts"></p>
+</body>
+</html>
+<script>
+    const getFeed = async () => {
+        const feedRes = await fetch('https://feed.podbean.com/rainforestalberta/feed.xml')
+        const feed = await feedRes.text()
+        let parser = new DOMParser();
+        let xmlDoc = parser.parseFromString(feed, "text/xml");
+
+        
+        xmlDoc.getElementsByTagName("item")[0].childNodes[0].nodeValue;
+        let items = xmlDoc.getElementsByTagName("item")
+        let podcasts = []
+        for (let item of items) {
+            let title = item.getElementsByTagName('title')[0].childNodes[0].nodeValue
+            let episode = item.getElementsByTagName('itunes:episode')[0].childNodes[0].nodeValue
+            let link = item.getElementsByTagName('link')[0].childNodes[0].nodeValue
+            let pubDate = item.getElementsByTagName('pubDate')[0].childNodes[0].nodeValue
+            let mp3 = item.getElementsByTagName('enclosure')[0].getAttribute('url')
+            podcasts.push({ title, episode, link, pubDate, mp3 })
+        }
+        console.log(podcasts)
+    }
+</script>
