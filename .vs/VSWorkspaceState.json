@@ -2,10 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\rss",
-    "\\rss\\build",
-    "\\rss\\node_modules",
     "\\rss\\public",
     "\\rss\\src"
   ],
+  "SelectedNode": "\\rss\\src\\App.js",
   "PreviewInSolutionExplorer": false
 }
