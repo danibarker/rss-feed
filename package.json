@@ -1,0 +1,20 @@
+{
+  "name": "ai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "echo hello"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danibarker/test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danibarker/test/issues"
+  },
+  "homepage": "https://github.com/danibarker/test#readme"
+}
